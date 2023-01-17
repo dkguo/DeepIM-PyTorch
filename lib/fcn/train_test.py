@@ -892,7 +892,8 @@ def test_image(network, dataset, im_color, im_depth, poses_est, test_data):
     pose = {'poses_init': poses_init, 'poses_est': result, 'poses_tgt': vdata['pose_tgt'], 'intrinsic_matrix': vdata['intrinsic_matrix']}
 
     # render result
-    im_pose, im_label, pcloud = render_image(dataset, im_color, result[-1])
+    # im_pose, im_label, pcloud = render_image(dataset, im_color, result[-1])
+    im_pose = None
 
     if cfg.TEST.VISUALIZE:
         if cfg.INPUT == 'RGBD':
