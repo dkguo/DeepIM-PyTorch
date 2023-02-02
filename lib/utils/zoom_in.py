@@ -71,7 +71,7 @@ def zoom_images(image_blob, image_real, image_imgn, image_flow, pose_src, intrin
         flow_zoom[i, :, :, 0] *= affine_matrix[0, 0] 
         flow_zoom[i, :, :, 1] *= affine_matrix[1, 1]
 
-        # construct masks
+        # construct hand_masks
         nz_y, nz_x = np.where(image_imgn_zoom[i, :, :, 0] > 0)
         x1 = int(np.min(nz_x))
         x2 = int(np.max(nz_x))
