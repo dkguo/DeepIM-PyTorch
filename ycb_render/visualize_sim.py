@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     renderer.set_fov(60)
     renderer.set_light_pos([0, 0, 0])
-    renderer.set_camera_view()
+    renderer.set_active_camera_view()
 
     image_tensor = torch.cuda.FloatTensor(height, width, 4).detach()
     seg_tensor = torch.cuda.FloatTensor(height, width, 4).detach()
